@@ -1,0 +1,44 @@
+                     ┌───────────────────┐
+                     │     Tkinter UI    │
+                     │                   │
+                     │ Folder             │
+                     │ File list          │
+                     │ Status             │
+                     │ Pause              │
+                     │ Sort               │
+                     └─────────┬─────────┘
+                               │
+                               ↓
+                     ┌───────────────────┐
+                     │  Folder Watcher   │
+                     │                   │
+                     │ Check every 1 sec │
+                     └─────────┬─────────┘
+                               │
+                               ↓
+                       Is file new?
+                               │
+                         ┌─────┴─────┐
+                         │           │
+                        No          Yes
+                         │           │
+                         │           ↓
+                         │     Is file stable?
+                         │           │
+                         │      ┌────┴────┐
+                         │      │         │
+                         │     No        Yes
+                         │      │         │
+                         │      │         ↓
+                         │      │   Find category
+                         │      │         │
+                         │      │         ↓
+                         │      │   Create folder
+                         │      │         │
+                         │      │         ↓
+                         │      │    Move file
+                         │      │         │
+                         └──────┴─────────┘
+                                    │
+                                    ↓
+                              Update UI
